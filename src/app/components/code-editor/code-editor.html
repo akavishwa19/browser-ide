@@ -1,0 +1,11 @@
+
+<button (click)="updateLanguage('javascript')" class="bg-green-400 rounded-2xl px-2.5 py-2 cursor-pointer mx-2 font-bold">
+  Javascript
+</button>
+
+<button (click)="updateLanguage('typescript')" class="bg-green-400 rounded-2xl px-2.5 py-2 cursor-pointer mx-2 font-bold">
+  Typescript
+</button>
+
+
+<ngx-monaco-editor [options]="editorOptions" [(ngModel)]="code"></ngx-monaco-editor>
