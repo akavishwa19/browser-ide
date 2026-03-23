@@ -1,9 +1,3 @@
-<button (click)="updateLanguage('javascript')" class="bg-green-400 rounded-2xl px-2.5 py-2 cursor-pointer mx-2 font-bold">Javascript</button>
+<!-- <ngx-monaco-editor [options]="editorOptions" [(ngModel)]="code"></ngx-monaco-editor> -->
 
-<button (click)="updateLanguage('typescript')" class="bg-green-400 rounded-2xl px-2.5 py-2 cursor-pointer mx-2 font-bold">Typescript</button>
-
-<h2>hi</h2>
-
-<img src="hi" alt="k" />
-
-<ngx-monaco-editor [options]="editorOptions" [(ngModel)]="code"></ngx-monaco-editor>
+<ngx-monaco-diff-editor [options]="options" [originalModel]="originalModel" [modifiedModel]="modifiedModel"></ngx-monaco-diff-editor>
