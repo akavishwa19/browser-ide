@@ -5,25 +5,23 @@ import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-code-editor',
-  imports: [
-     FormsModule,
-    MonacoEditorModule
-  ],
+  imports: [FormsModule, MonacoEditorModule],
   templateUrl: './code-editor.html',
   styleUrl: './code-editor.css',
 })
 export class CodeEditor {
-
   protected readonly title = signal('ide');
   readonly isBrowser = isPlatformBrowser(inject(PLATFORM_ID));
 
-  updateLanguage(language:string){
-    this.editorOptions={
-      ...this.editorOptions,language:language
-    }
+  updateLanguage(language: string) {
+    this.editorOptions = {
+      ...this.editorOptions,
+      language: language,
+    };
   }
 
   editorOptions = { theme: 'vs-dark', language: 'typescript' };
-  code: string = 'function x() {\nconsole.log("Hello world!");\n}';
+  code = 'function x() {\nconsole.log("Hello world!");\n}';
 
+  name = 's';
 }
